@@ -1,4 +1,4 @@
-language: 
+language:
   - cpp
 
 before_install:
