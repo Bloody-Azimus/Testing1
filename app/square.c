@@ -21,7 +21,7 @@ struct sqr square (float a, float b, float c)
     } else
         IXI.p = -2;
 
-    return IXI;
+   return IXI;
 }
 
 
