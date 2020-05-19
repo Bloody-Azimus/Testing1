@@ -6,8 +6,8 @@ before_install:
 
 addons:
  sonarcloud:
-  organization: "AZIMUS"
-   token: $SONAR_TOKEN
+ organization: "AZIMUS"
+ token: $SONAR_TOKEN
 
 script:
   - qmake
@@ -18,6 +18,6 @@ after_success:
  - coveralls --root . -E ".*external.*" -E ".*tests.*"
  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
  - sonar-scanner
-  
+ 
 notifications:
   email: false
