@@ -1,22 +1,25 @@
+dist: trusty
+
 language:
  - cpp
- before_install:
- - pip install --user cpp-coveralls
+
 addons:
  sonarcloud:
-  organization: "bloody-azimus"
-   token:
-    secure: $SONAR_TOKEN
+   organization: "bloody-azimus"
+     token: $SONAR_TOKEN
+
+before_install:
+ - pip install --user cpp-coveralls
+
 script:
  - qmake
- - make
- - ./tests/tests
+  - make
+   - ./tests/tests
+
 after_success:
- - coveralls --root . -E ".*external.*" -E ".*tests.*"
- - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
- - sonar-scanner
-cache:
- directories:
-  - '$HOME/.sonar/cache'
+ - coveralls --root . -E ".external." -E ".tests."
+  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+   - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
+
 notifications:
  email: false
