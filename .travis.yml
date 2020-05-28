@@ -5,8 +5,8 @@ language:
 
 addons:
   sonarcloud:
-  organization: "bloody-azimus"
-  token: $SONAR_TOKEN
+   organization: "bloody-azimus"
+    token: $SONAR_TOKEN
 
 before_install:
   - pip install --user cpp-coveralls
