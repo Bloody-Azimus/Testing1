@@ -8,7 +8,7 @@ addons:
   sonarcloud:
   organization: "bloody-azimus"
   token:
-  secure: $SONAR_TOKEN
+  secure: 41e163b7b021555c4df9ae3c1bd92197280d914c
 
 script:
   - qmake
@@ -18,7 +18,7 @@ script:
 after_success:
   - coveralls --root . -E ".external." -E ".tests."
   - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
-  - sonar-scanner
+  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
 
 cache:
 directories:
