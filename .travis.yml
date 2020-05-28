@@ -8,7 +8,7 @@ addons:
   sonarcloud:
   organization: "bloody-azimus"
   token:
-  secure: 41e163b7b021555c4df9ae3c1bd92197280d914c
+  secure: $SONAR_TOKEN
 
 script:
   - qmake
