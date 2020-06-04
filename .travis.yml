@@ -5,9 +5,9 @@ before_install:
   - pip install --user cpp-coveralls
 
 addons:
-sonarcloud:
-  organization: "bloody-azimus"
-  token: $SONAR_TOKEN
+  sonarcloud:
+    organization: "bloody-azimus"
+    token: $SONAR_TOKEN
 
 script:
   - qmake
@@ -20,8 +20,8 @@ after_success:
   - sonar-scanner
 
 cache:
-directories:
-  - '$HOME/.sonar/cache'
+  directories:
+    - '$HOME/.sonar/cache'
 
 notifications:
 email: false
