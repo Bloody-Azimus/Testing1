@@ -1,6 +1,6 @@
 #include "tst_test1.h"
 #include "fibonachi_test.h"
-#include "square.h"
+#include "testsquare.h"
 #include <gtest/gtest.h>
 
 int main(int argc, char *argv[])

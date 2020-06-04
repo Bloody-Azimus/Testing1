@@ -1,10 +1,10 @@
-#ifndef SQUARE_H
-#define SQUARE_H
+#ifndef TESTSQUARE_H
+#define TESTSQUARE_H
 
 #include <gtest/gtest.h>
 
 extern "C" {
-#include "myfunc.h"
+#include "../app/square.h"
 }
 
 TEST(SquareNegative, a_is_Zero) {
@@ -32,4 +32,4 @@ TEST(SquarePositive, two_sqrt) {
     EXPECT_EQ(sqr1.x2,-1);
 }
 
-#endif // SQUARE_H
+#endif // TESTSQUARE_H

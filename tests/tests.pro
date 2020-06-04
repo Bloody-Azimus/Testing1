@@ -18,8 +18,8 @@ LIBS += -lgcov
 HEADERS +=     tst_test1.h \
     ../app/myfunc.h \
     fibonachi_test.h \
-    square.h
-
+    ../app/square.h \
+    testsquare.h
 SOURCES +=     main.cpp \
     ../app/myfunc.c\
 ../app/square.c

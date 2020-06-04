@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include <myfunc.h>
+#include <square.h>
 struct sqr square (float a, float b, float c)
 {
     struct sqr IXI = {0,0,0};
